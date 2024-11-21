@@ -1,0 +1,16 @@
+.btn {
+  width: 272px;
+  padding: 19px;
+  text-align: center;
+  border: unset;
+  color: $color-yellow;
+  background-color: $color-black;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-nero;
+  }
+}
