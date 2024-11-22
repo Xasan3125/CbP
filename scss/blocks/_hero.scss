@@ -10,13 +10,14 @@
   }
   @include vp-1439 {
     background-image: url("/assets/image/banner-1-tablet.png");
+    max-height: 1000px;
     @include vr-2 {
       background-image: url("/assets/image/banner-1-tablet@2x.png");
     }
   }
   @include vp-767 {
     background-image: url("/assets/image/banner-1-mobile.png");
-    height: 713px;
+    max-height: 713px;
     @include vr-2 {
       background-image: url("/assets/image/banner-1-mobile@2x.png");
     }
@@ -48,11 +49,12 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+
     @include vp-767 {
       width: 320px;
       height: 207px;
       padding: 30px 38px;
-      right: -20px;
+      right: -12px;
       bottom: -97px;
     }
   }

@@ -4,6 +4,12 @@
   }
 }
 
+@mixin vp-1023 {
+  @media (max-width: $vp-tablet-s) {
+    @content;
+  }
+}
+
 @mixin vp-767 {
   @media (max-width: $vp-mobile) {
     @content;

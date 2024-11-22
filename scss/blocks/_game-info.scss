@@ -1,5 +1,6 @@
 .game-info {
   padding: 70px 0;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -11,6 +12,10 @@
     line-height: 63.3px;
     text-align: left;
     margin: 0 auto 25px 0;
+    @include vp-767 {
+      font-size: 30px;
+      line-height: 30.63px;
+    }
   }
 
   &__text {
@@ -19,40 +24,79 @@
     line-height: 34px;
     text-align: left;
     margin: 0 328px 70px 0;
+    @include vp-1023 {
+      margin: 0 0 70px 0;
+    }
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 32px;
+      margin: 0 0 70px 0;
+    }
   }
   &__text-item {
     font-weight: 700;
     color: $color-viking;
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 32px;
+    }
   }
   &__gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
     gap: 32px;
+    @include vp-1439 {
+      max-width: 952px;
+    }
+    @include vp-1023 {
+      max-width: 728px;
+    }
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      min-width: 320px;
+    }
   }
 
   &__img-wrapper {
-    width: 460px;
-    height: 196px;
-    grid-column: span 1;
+    max-width: 460px;
+    @include vp-1439 {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    @include vp-1023 {
+      min-width: 348px;
+    }
+    @include vp-767 {
+      min-width: unset;
+    }
   }
 
   &__img-wrapper--XL {
-    width: 788px;
+    min-width: 788px;
     grid-column: 2/3;
     grid-row: span 2;
     @include vp-1439 {
       grid-row: 2/3;
       grid-column: 1/3;
-      width: 952px;
+      min-width: 952px;
+    }
+    @include vp-1023 {
+      min-width: 728px;
+    }
+    @include vp-767 {
+      min-width: unset;
+
+      grid-column: 1/2;
+      grid-row: 3/4;
     }
   }
+
   &__img {
-    width: 460px;
+    width: 100%;
   }
   &__img--XL {
-    width: 788px;
-    @include vp-1439 {
-      width: 952px;
-    }
+    width: 100%;
   }
 }
