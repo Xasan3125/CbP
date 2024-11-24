@@ -1,0 +1,42 @@
+.custom-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    background-color: transparent;
+    padding: 13px 13px 13px 5px;
+    border: none;
+    border-bottom: 1px solid $color-gray;
+    color: $color-white;
+    &::placeholder {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 21.09px;
+      color: $color-gray;
+    }
+  }
+}
+
+.custom-input--file {
+  padding: 39px;
+  border: 2px dashed #777777;
+  margin-bottom: 10px;
+  .custom-input__label {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center;
+    text-decoration: underline;
+    color: $color-white;
+    cursor: pointer;
+    &-span {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14.06px;
+    }
+  }
+  .custom-input__field {
+    display: none;
+  }
+}

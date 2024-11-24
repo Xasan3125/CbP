@@ -24,3 +24,19 @@
     line-height: 40px;
   }
 }
+
+.btn--yellow {
+  width: 192px;
+  background-color: $color-yellow;
+  color: $color-black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  text-align: center;
+  &:hover {
+    background-color: $color-bird-flower;
+  }
+  &:focus {
+    background-color: $color-bird-flower;
+  }
+}

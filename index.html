@@ -69,7 +69,7 @@
       <div class="game-info__wrapper">
         <h2 class="game-info__title">Найт-Сити изменит тебя навсегда!</h2>
         <p class="game-info__text">
-          <span class="game-info__text-item">Cyberpunk 2077</span> — приключенческая ролевая игра, действие которой
+          <span class="blue-text">Cyberpunk 2077</span> — приключенческая ролевая игра, действие которой
           происходит в мегаполисе Найт-Сити, где власть,
           роскошь и модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках устройства, позволяющего
           обрести бессмертие. Ты сможешь менять киберимпланты, навыки и стиль игры своего персонажа, исследуя открытый
@@ -97,6 +97,65 @@
           alt="Cyberpunk 2077 скриншот">
       </picture>
     </div>
+  </section>
+  <section class="prize">
+    <img class="prize__border-up" src="/assets/image/up-border.png" srcset="/assets/image/up-border@2x.png 2x"
+      alt="Граница формы">
+    <div class="container">
+      <div class="prize__inner">
+        <div class="prize__up">
+          <div class="prize__heading">
+            <svg class="prize__svg" width="132" height="132" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="assets\sprite\sprite.svg#icon-sales"></use>
+            </svg>
+            <h2 class="prize__title">Играй и выигрывай!</h2>
+          </div>
+          <p class="prize__text">Играй в&nbsp;<span class="blue-text">Cyberpunk 2077</span> и&nbsp;получи возможность
+            выиграть консоль <span class="blue-text">Xbox Series
+              X</span>&nbsp;или <span class="blue-text">Sony
+              PlayStation 5!</span> Заполни форму ниже и&nbsp;приложи скриншот о&nbsp;покупке игры. Итоги розыгрыша
+            будут
+            подведены
+            1&nbsp;февраля.
+            Удачи! ;)</p>
+        </div>
+        <form class="prize__form-inner" action="POST">
+          <div class="custom-input">
+            <input class="custom-input__field" id="name" type="text" placeholder="Как тебя зовут?" required>
+          </div>
+          <div class="custom-input">
+            <input class="custom-input__field" id="email" type="email" placeholder="Твой е-mail" required>
+          </div>
+          <div class="custom-input custom-input--file">
+            <label class="custom-input__label" for="file">Прикрепить скриншот <br><span
+                class="custom-input__label-span">.png
+                / .jpg / .pdf</span></label>
+            <input class="custom-input__field" id="file" type="file">
+          </div>
+          <button class="btn btn--yellow" type="submit">Отправить</button>
+          <div class="custom-checkbox">
+            <input class="custom-checkbox__field" type="checkbox" name="agree" id="agree" required>
+            <svg class="custom-checkbox__icon" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="assets\sprite\sprite.svg#icon-checked"></use>
+            </svg>
+            <label class="custom-checkbox__label" for="agree">
+              Согласен на обработку персональных данных
+            </label>
+            <p class="custom-checkbox__error">Пожалуйста согласисеть на обработку персональных данных</p>
+
+          </div>
+
+        </form>
+        <picture>
+          <source media="(max-width:1024px)"
+            srcset="/assets/image/console-tablet.png 1x, /assets/image/console-tablet@2x.png 2x">
+          <img class="prize__img" src="/assets/image/console.png" srcset="/assets/image/console@2x.png 2x"
+            alt="Консоли">
+        </picture>
+      </div>
+    </div>
+    <img class="prize__border-down" src="/assets/image/down-border.png" srcset="/assets/image/down-border@2x.png 2x"
+      alt="Граница формы">
   </section>
 </body>
 

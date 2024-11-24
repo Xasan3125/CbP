@@ -337,6 +337,8 @@ template {
 *,
 *::after,
 *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   outline: none;
 }
@@ -351,6 +353,7 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 0;
+  min-width: 100%;
 }
 
 main {
@@ -560,8 +563,25 @@ a {
   }
 }
 
+.btn--yellow {
+  width: 192px;
+  background-color: #f8f200;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+  text-align: center;
+}
+.btn--yellow:hover {
+  background-color: #d4d107;
+}
+.btn--yellow:focus {
+  background-color: #d4d107;
+}
+
 .game-info {
   padding: 70px 0;
+  width: 100%;
 }
 .game-info__wrapper {
   display: flex;
@@ -575,6 +595,11 @@ a {
   text-align: left;
   margin: 0 auto 25px 0;
 }
+@media (max-width: 1439px) {
+  .game-info__title {
+    margin: 0 250px 25px 0;
+  }
+}
 @media (max-width: 767px) {
   .game-info__title {
     font-size: 30px;
@@ -586,7 +611,12 @@ a {
   font-weight: 400;
   line-height: 34px;
   text-align: left;
-  margin: 0 328px 70px 0;
+  margin: 0 328px 59px 0;
+}
+@media (max-width: 1439px) {
+  .game-info__text {
+    margin: 0 164px 59px 0;
+  }
 }
 @media (max-width: 1023px) {
   .game-info__text {
@@ -598,16 +628,6 @@ a {
     font-size: 16px;
     line-height: 32px;
     margin: 0 0 70px 0;
-  }
-}
-.game-info__text-item {
-  font-weight: 700;
-  color: #52bedb;
-}
-@media (max-width: 767px) {
-  .game-info__text-item {
-    font-size: 16px;
-    line-height: 32px;
   }
 }
 .game-info__gallery {
@@ -631,6 +651,7 @@ a {
   .game-info__gallery {
     grid-template-columns: 1fr;
     min-width: 320px;
+    justify-items: center;
   }
 }
 .game-info__img-wrapper {
@@ -662,6 +683,7 @@ a {
     grid-row: 2/3;
     grid-column: 1/3;
     min-width: 952px;
+    max-height: 424px;
   }
 }
 @media (max-width: 1023px) {
@@ -681,4 +703,171 @@ a {
 }
 .game-info__img--XL {
   width: 100%;
+  height: 100%;
+}
+
+.blue-text {
+  font-weight: 700;
+  color: #52bedb;
+}
+
+.prize {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+.prize__border-up {
+  width: 100%;
+  margin-bottom: 55px;
+}
+.prize__border-down {
+  width: 100%;
+  margin-top: 70px;
+}
+.prize__inner {
+  display: grid;
+  grid-template-columns: 460px 788px;
+  gap: 24px 35px;
+}
+.prize__up {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  grid-column: 1/3;
+  width: 100%;
+}
+.prize__heading {
+  display: flex;
+  position: relative;
+  padding: 14px;
+  margin: 0 0 25px 0;
+}
+.prize__svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.prize__title {
+  font-family: "Archangelsk";
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 63.3px;
+  text-align: left;
+  padding-left: 150px;
+  color: #ffffff;
+  margin: 0;
+}
+.prize__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  color: #ffffff;
+  width: 952px;
+  margin: 0 auto 0 0;
+}
+.prize__form-inner {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  justify-content: flex-end;
+}
+.prize__img {
+  width: 952px;
+}
+
+.custom-checkbox__field:checked + .custom-checkbox__icon {
+  display: block;
+}
+
+.custom-checkbox {
+  position: relative;
+}
+.custom-checkbox__field {
+  display: none;
+}
+.custom-checkbox__label {
+  font-size: 12px;
+  line-height: 14.06px;
+  padding-left: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.custom-checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #777777;
+  width: 14px;
+  height: 14px;
+}
+.custom-checkbox__icon {
+  position: absolute;
+  display: none;
+  left: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+}
+.custom-checkbox__error {
+  display: none;
+  position: absolute;
+  top: 25px;
+  text-decoration: underline;
+  margin: 0;
+  font-size: 12px;
+  line-height: 14.06px;
+  color: #ffffff;
+}
+
+.custom-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.custom-input__field {
+  background-color: transparent;
+  padding: 13px 13px 13px 5px;
+  border: none;
+  border-bottom: 1px solid #777777;
+  color: #ffffff;
+}
+.custom-input__field::-moz-placeholder {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.09px;
+  color: #777777;
+}
+.custom-input__field::placeholder {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.09px;
+  color: #777777;
+}
+
+.custom-input--file {
+  padding: 39px;
+  border: 2px dashed #777777;
+  margin-bottom: 10px;
+}
+.custom-input--file .custom-input__label {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.09px;
+  text-align: center;
+  text-decoration: underline;
+  color: #ffffff;
+  cursor: pointer;
+}
+.custom-input--file .custom-input__label-span {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14.06px;
+}
+.custom-input--file .custom-input__field {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

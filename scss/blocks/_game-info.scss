@@ -1,5 +1,6 @@
 .game-info {
   padding: 70px 0;
+  width: 100%;
 
   &__wrapper {
     display: flex;
@@ -12,6 +13,9 @@
     line-height: 63.3px;
     text-align: left;
     margin: 0 auto 25px 0;
+    @include vp-1439 {
+      margin: 0 250px 25px 0;
+    }
     @include vp-767 {
       font-size: 30px;
       line-height: 30.63px;
@@ -23,7 +27,10 @@
     font-weight: 400;
     line-height: 34px;
     text-align: left;
-    margin: 0 328px 70px 0;
+    margin: 0 328px 59px 0;
+    @include vp-1439 {
+      margin: 0 164px 59px 0;
+    }
     @include vp-1023 {
       margin: 0 0 70px 0;
     }
@@ -31,14 +38,6 @@
       font-size: 16px;
       line-height: 32px;
       margin: 0 0 70px 0;
-    }
-  }
-  &__text-item {
-    font-weight: 700;
-    color: $color-viking;
-    @include vp-767 {
-      font-size: 16px;
-      line-height: 32px;
     }
   }
   &__gallery {
@@ -56,6 +55,7 @@
     @include vp-767 {
       grid-template-columns: 1fr;
       min-width: 320px;
+      justify-items: center;
     }
   }
 
@@ -81,13 +81,13 @@
       grid-row: 2/3;
       grid-column: 1/3;
       min-width: 952px;
+      max-height: 424px;
     }
     @include vp-1023 {
       min-width: 728px;
     }
     @include vp-767 {
       min-width: unset;
-
       grid-column: 1/2;
       grid-row: 3/4;
     }
@@ -98,5 +98,6 @@
   }
   &__img--XL {
     width: 100%;
+    height: 100%;
   }
 }
