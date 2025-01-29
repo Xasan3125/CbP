@@ -103,11 +103,11 @@
       alt="Граница формы">
     <div class="container">
       <div class="prize__inner">
+        <svg class="prize__svg" width="132" height="132" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="assets\sprite\sprite.svg#icon-sales"></use>
+        </svg>
         <div class="prize__up">
           <div class="prize__heading">
-            <svg class="prize__svg" width="132" height="132" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="assets\sprite\sprite.svg#icon-sales"></use>
-            </svg>
             <h2 class="prize__title">Играй и выигрывай!</h2>
           </div>
           <p class="prize__text">Играй в&nbsp;<span class="blue-text">Cyberpunk 2077</span> и&nbsp;получи возможность
@@ -148,8 +148,11 @@
         </form>
         <div class="prize__img-wrapper">
           <picture>
-            <source media="(max-width:1023px)"
+            <source media="(max-width:767px)"
+              srcset="/assets/image/console-mobile.png 1x, /assets/image/console-mobile@2x.png 2x">
+            <source media="(max-width:1439px)"
               srcset="/assets/image/console-tablet.png 1x, /assets/image/console-tablet@2x.png 2x">
+
             <img class="prize__img" src="/assets/image/console.png" srcset="/assets/image/console@2x.png 2x"
               alt="Консоли">
           </picture>

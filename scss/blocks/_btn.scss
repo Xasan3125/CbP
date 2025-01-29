@@ -39,4 +39,8 @@
   &:focus {
     background-color: $color-bird-flower;
   }
+  @include vp-767 {
+    width: 100%;
+    height: 60px;
+  }
 }

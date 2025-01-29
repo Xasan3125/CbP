@@ -461,9 +461,11 @@ a {
   .hero__tablet {
     width: 320px;
     height: 207px;
-    padding: 30px 38px;
+    padding: 28px 36px;
     right: -12px;
     bottom: -97px;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 76%, 85% 100%, 30% 100%, 0 100%, 0 24%);
+            clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 76%, 85% 100%, 30% 100%, 0 100%, 0 24%);
   }
 }
 .hero__text {
@@ -480,8 +482,6 @@ a {
     font-weight: 400;
     line-height: 30.63px;
     text-align: center;
-    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 76%, 85% 100%, 30% 100%, 0 100%, 0 24%);
-            clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 76%, 85% 100%, 30% 100%, 0 100%, 0 24%);
   }
 }
 
@@ -578,10 +578,21 @@ a {
 .btn--yellow:focus {
   background-color: #d4d107;
 }
+@media (max-width: 767px) {
+  .btn--yellow {
+    width: 100%;
+    height: 60px;
+  }
+}
 
 .game-info {
   padding: 70px 0;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .game-info {
+    padding: 120px 0 70px 0;
+  }
 }
 .game-info__wrapper {
   display: flex;
@@ -604,6 +615,7 @@ a {
   .game-info__title {
     font-size: 30px;
     line-height: 30.63px;
+    margin: 0 0 25px 0;
   }
 }
 .game-info__text {
@@ -627,7 +639,7 @@ a {
   .game-info__text {
     font-size: 16px;
     line-height: 32px;
-    margin: 0 0 70px 0;
+    margin: 0 0 60px 0;
   }
 }
 .game-info__gallery {
@@ -718,20 +730,45 @@ a {
 }
 .prize__border-up {
   width: 100%;
+  height: 100%;
+  min-height: 70px;
   margin-bottom: 55px;
+}
+@media (max-width: 1439px) {
+  .prize__border-up {
+    margin-bottom: 95px;
+  }
+}
+@media (max-width: 767px) {
+  .prize__border-up {
+    margin-bottom: 55px;
+  }
 }
 .prize__border-down {
   width: 100%;
+  height: 100%;
+  min-height: 70px;
   margin-top: 70px;
 }
 .prize__inner {
+  position: relative;
   display: grid;
   grid-template-columns: 460px 61.5%;
   gap: 24px 35px;
 }
 @media (max-width: 1439px) {
   .prize__inner {
-    grid-template-columns: 360px 1fr;
+    grid-template-columns: 460px 50%;
+  }
+}
+@media (max-width: 1023px) {
+  .prize__inner {
+    grid-template-columns: 1fr 50%;
+  }
+}
+@media (max-width: 767px) {
+  .prize__inner {
+    grid-template-columns: 1fr;
   }
 }
 .prize__up {
@@ -741,26 +778,56 @@ a {
   grid-column: 1/3;
   width: 100%;
 }
+@media (max-width: 1439px) {
+  .prize__up {
+    grid-column: 1/2;
+  }
+}
+@media (max-width: 767px) {
+  .prize__up {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
 .prize__heading {
   display: flex;
-  position: relative;
-  padding: 14px;
-  margin: 0 0 25px 0;
+  margin: 0 0 20px 0;
 }
 .prize__svg {
   position: absolute;
-  bottom: 0;
+  top: -40px;
   left: 0;
+}
+@media (max-width: 1439px) {
+  .prize__svg {
+    top: -82px;
+  }
+}
+@media (max-width: 767px) {
+  .prize__svg {
+    width: 62px;
+    height: 62px;
+    top: -49px;
+  }
 }
 .prize__title {
   font-family: "Archangelsk";
   font-size: 62px;
   font-weight: 400;
-  line-height: 63.3px;
   text-align: left;
-  padding-left: 150px;
   color: #ffffff;
-  margin: 0;
+  margin: 16px 14px 14px 164px;
+}
+@media (max-width: 1439px) {
+  .prize__title {
+    margin: 65px 0 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .prize__title {
+    font-size: 30px;
+    margin: 0;
+  }
 }
 .prize__text {
   font-size: 18px;
@@ -771,6 +838,16 @@ a {
   width: 952px;
   margin: 0 auto 0 0;
 }
+@media (max-width: 1439px) {
+  .prize__text {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .prize__text {
+    line-height: 32px;
+  }
+}
 .prize__form-inner {
   max-width: 100%;
   display: flex;
@@ -778,8 +855,41 @@ a {
   gap: 23px;
   justify-content: flex-end;
 }
-.prize__img {
-  width: 100%;
+@media (max-width: 1439px) {
+  .prize__form-inner {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media (max-width: 767px) {
+  .prize__form-inner {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 1439px) {
+  .prize__img-wrapper {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+@media (max-width: 1023px) {
+  .prize__img-wrapper {
+    margin: auto 0;
+  }
+}
+@media (max-width: 767px) {
+  .prize__img-wrapper {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .prize__img {
+    width: 150%;
+  }
 }
 
 .custom-checkbox__field:checked + .custom-checkbox__icon {
@@ -857,7 +967,7 @@ a {
 .custom-input--file {
   padding: 39px;
   border: 2px dashed #777777;
-  margin-bottom: 10px;
+  margin: 10px 0 0 0;
 }
 .custom-input--file .custom-input__label {
   font-size: 18px;
