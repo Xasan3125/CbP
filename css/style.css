@@ -726,8 +726,13 @@ a {
 }
 .prize__inner {
   display: grid;
-  grid-template-columns: 460px 788px;
+  grid-template-columns: 460px 61.5%;
   gap: 24px 35px;
+}
+@media (max-width: 1439px) {
+  .prize__inner {
+    grid-template-columns: 360px 1fr;
+  }
 }
 .prize__up {
   display: flex;
@@ -767,14 +772,14 @@ a {
   margin: 0 auto 0 0;
 }
 .prize__form-inner {
-  max-width: 460px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 23px;
   justify-content: flex-end;
 }
 .prize__img {
-  width: 952px;
+  width: 100%;
 }
 
 .custom-checkbox__field:checked + .custom-checkbox__icon {
