@@ -545,6 +545,9 @@ a {
   font-size: 24px;
   font-weight: 700;
   line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .btn:hover {
@@ -564,6 +567,7 @@ a {
 }
 
 .btn--yellow {
+  margin-top: 20px;
   width: 192px;
   background-color: #f8f200;
   color: #000000;
@@ -590,6 +594,15 @@ a {
   height: 59px;
   font-size: 18px;
   line-height: 21.09px;
+}
+@media (max-width: 400px) {
+  .btn--small {
+    width: 184px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
 }
 
 .game-info {
@@ -761,7 +774,7 @@ a {
   position: relative;
   display: grid;
   grid-template-columns: 460px 61.5%;
-  gap: 24px 35px;
+  gap: 20px 35px;
 }
 @media (max-width: 1439px) {
   .prize__inner {
@@ -776,6 +789,7 @@ a {
 @media (max-width: 767px) {
   .prize__inner {
     grid-template-columns: 1fr;
+    gap: 23px 35px;
   }
 }
 .prize__up {
@@ -799,6 +813,11 @@ a {
 .prize__heading {
   display: flex;
   margin: 0 0 20px 0;
+}
+@media (max-width: 767px) {
+  .prize__heading {
+    margin-bottom: 25px;
+  }
 }
 .prize__svg {
   position: absolute;
@@ -866,6 +885,7 @@ a {
   .prize__form-inner {
     grid-column: 1/2;
     grid-row: 2/3;
+    gap: 18px;
   }
 }
 @media (max-width: 767px) {
@@ -995,19 +1015,43 @@ a {
 }
 
 .monitor {
-  padding: 65px 0;
+  padding: 69px 0;
   background-color: #f8f200;
+}
+@media (max-width: 767px) {
+  .monitor {
+    padding: 55px 0;
+  }
 }
 .monitor__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 }
+@media (max-width: 767px) {
+  .monitor__wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 .monitor__img-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 26px;
+}
+@media (max-width: 1439px) {
+  .monitor__img-wrapper {
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .monitor__img-wrapper {
+    margin-top: 7px;
+  }
+}
+.monitor__img {
+  width: 100%;
 }
 .monitor__text-wrapper {
   display: flex;
@@ -1021,24 +1065,49 @@ a {
   text-align: left;
   margin: 0 auto 25px 0;
 }
+@media (max-width: 400px) {
+  .monitor__heading {
+    font-size: 30px;
+    line-height: 30.63px;
+  }
+}
 .monitor__text {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 34px;
   text-align: left;
-  margin: 0 auto 25px 0;
+  margin: 0px auto 19px 0;
+}
+@media (max-width: 400px) {
+  .monitor__text {
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 17px;
+  }
 }
 .monitor__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin: 0 auto 40px 0;
+  gap: 22px;
+  margin: 0 auto 44px 0;
   list-style-type: none;
+}
+@media (max-width: 767px) {
+  .monitor__list {
+    margin-bottom: 39px;
+    gap: 17px;
+  }
 }
 .monitor__list-item {
   display: flex;
   gap: 10px;
+  padding-left: 4px;
+}
+@media (max-width: 767px) {
+  .monitor__list-item {
+    gap: 21px;
+  }
 }
 .monitor__list-item-text {
   font-family: "Roboto", "Arial", sans-serif;
@@ -1047,9 +1116,21 @@ a {
   line-height: 21.09px;
   text-align: left;
 }
+@media (max-width: 400px) {
+  .monitor__list-item-text {
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+}
 .monitor__list-icon {
   width: 24px;
   height: 24px;
+}
+@media (max-width: 767px) {
+  .monitor__list-icon {
+    width: 18px;
+    height: 18px;
+  }
 }
 .monitor__btn-wrapper {
   display: flex;

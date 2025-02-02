@@ -9,6 +9,9 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   &:hover {
     background-color: $color-nero;
@@ -26,6 +29,7 @@
 }
 
 .btn--yellow {
+  margin-top: 20px;
   width: 192px;
   background-color: $color-yellow;
   color: $color-black;
@@ -49,4 +53,11 @@
   height: 59px;
   font-size: 18px;
   line-height: 21.09px;
+  @media (max-width: 400px) {
+    width: 184px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
 }
